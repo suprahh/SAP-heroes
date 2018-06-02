@@ -1,0 +1,12 @@
+<h1>Buscando <small>{{busqueda}}</small></h1>
+<hr>
+<div  *ngIf="heroes.length == 0" class="row animated fadeIn fast">
+  <div class="col-md-12">
+    <div class="alert alert-info" role="alert">
+      No existen resultados con el término: {{busqueda}}
+    </div>
+  </div>
+</div>
+<div class="card-columns animated fadeIn fast">
+  <app-heroe-targeta [heroe]="heroe" [index]="heroe.id" *ngFor="let heroe of heroes; let i = index"></app-heroe-targeta>
+</div>
